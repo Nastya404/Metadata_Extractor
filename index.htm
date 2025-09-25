@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализатор изображений</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Metadata Extractor</h1>
+        <p>Upload a file or an entire folder to extract and view their metadata <br> including file size, dimensions, and more.
+        </p>
+    </header>
+    <main> 
+        <div class="upload-images-field">
+            <h2 class="upload-images-h" >Upload Images</h2>
+            <div class="images-container">
+                <p class="upload-images-p">Upload JPG Images</p>
+                <div class="button-bar">
+                    <input type="file" id="select-files-input" multiple hidden>
+                    <button id="select-files-btn" class="btn">Choose Files</button>
+                    <button id="select-folder-btn" class="btn">Choose Folder</button>
+                    <button id="clear-table-btn" class="btn btn-danger">Clear</button>
+                </div>
+                
+            </div>
+        </div>
+
+
+            <div class="table-container">
+                <table id="image-info-table">
+                    <thead>
+                        <tr>
+                            <th>File Name</th>
+                            <th>Dimensions (px)</th>
+                            <th>Resolution (DPI)</th>
+                            <th>Color Depth (bits)</th>
+                            <th>Compression</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+    </main>
+</body>
+
+</html>
